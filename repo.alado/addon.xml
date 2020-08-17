@@ -6,8 +6,8 @@
 		<datadir zip="true">https://raw.githubusercontent.com/Alado2020/repo.alado/master/repo/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>[COLOR gold][B]By Team Milhano[/B][/COLOR]</summary>
-		<description>[COLOR gold][B]By Team Milhano[/B][/COLOR]</description>
+		<summary>[COLOR gold]By Team Milhano[/COLOR]</summary>
+		<description>[COLOR gold]By Team Milhano[/COLOR]</description>
 		<disclaimer></disclaimer>
 		<platform>all</platform>
 	</extension>
