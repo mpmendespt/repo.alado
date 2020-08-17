@@ -32,7 +32,7 @@
   </extension>
 </addon>
 
-<addon id="repo.alado" name="[COLOR lime][B]Alado[/B][/COLOR]" version="0.1" provider-name="[COLOR lime][B]ALADO[/B][/COLOR]">
+<addon id="repo.alado" name="[COLOR lime][B]Alado[/COLOR][COLOR gold] Repository[/B][/COLOR]" version="0.1" provider-name="[COLOR lime][B]ALADO[/B][/COLOR]">
 	<extension point="xbmc.addon.repository" name="repo.alado">
 		<info compressed="false">https://raw.githubusercontent.com/Alado2020/repo.alado/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/Alado2020/repo.alado/master/addons.xml.md5</checksum>
@@ -45,4 +45,5 @@
 		<platform>all</platform>
 	</extension>
 </addon>
+
 </addons>
