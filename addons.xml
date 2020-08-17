@@ -1,6 +1,28 @@
 <?xml version="1.1" encoding="UTF-8" standalone="yes"?>
 <addons>
 
+<addon id="plugin.video.FlixCine" name="[B][COLOR yellow]Flix[/COLOR][COLOR lime]Cine[/COLOR][/B]" version="10.0.3" provider-name="Kodi"> 
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.future"/>
+		<import addon="script.module.simplejson"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+   <extension point="xbmc.addon.repository" name="Repositorio TWTutoriais">
+		<info compressed="false">https://raw.githubusercontent.com/BUILDTONYWARLLEY/REPOTWTUTORIAIS/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/BUILDTONYWARLLEY/REPOTWTUTORIAIS/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/BUILDTONYWARLLEY/REPOTWTUTORIAIS/master/Plugins/</datadir>
+	</extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>[B][COLOR yellow]Flix[/COLOR][COLOR lime]Cine[/COLOR][/B] para sua Família.</summary>
+        <description>[B][COLOR yellow]Flix[/COLOR][COLOR lime]Cine[/COLOR][/B] Oferece sempre as melhores Séries e os Melhores Lançamentos de Filmes para você.</description>
+        <disclaimer>[B][COLOR yellow]Flix[/COLOR][COLOR lime]Cine[/COLOR][/B] Não hospeda os conteúdos, Todos os Filmes e Séries são links disponíveis em livre procura pela internet.</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="plugin.program.Milhano" name=" [B][COLOR orange]Ares Team Milhano Wizard[/COLOR][/B]" version="M.1" provider-name="[B][COLOR red]Team Milhano Wizard[/COLOR][/B]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
