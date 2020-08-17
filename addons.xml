@@ -1,6 +1,55 @@
 <?xml version="1.1" encoding="UTF-8" standalone="yes"?>
 <addons>
 
+<addon id="plugin.video.gdrive" version="8.866" name="gdrive" provider-name="ddurdle">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video audio image programs</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Listen to music, watch videos and view photos from your Google Drive account</summary>
+        <description>Plays music and video from your Google Drive account.  Not affiliated with Google.</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.tempest" version="5.0.66" name="Tempest" provider-name="Tempest">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.tempest.artwork" />
+		<import addon="script.tempest.metadata" />
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" />
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="plugin.video.youtube"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="tempest.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<description lang="en">[I][B]Tempest Movies and TV[/B][/I][CR][CR]This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>
+			v5.0.66
+- Fixed UstvGo
+- Fixed Ustreamix
+- Fixed Myustv
+- Fixed Foreign Channels
+- Next Update will include a update to streamlive to fix some channels and remove some
+		</news>
+	</extension>
+</addon>
+
 <addon id="plugin.video.FlixCine" name="[B][COLOR yellow]Flix[/COLOR][COLOR lime]Cine[/COLOR][/B]" version="10.0.3" provider-name="Kodi"> 
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
