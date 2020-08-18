@@ -1,6 +1,81 @@
 <?xml version="1.1" encoding="UTF-8" standalone="yes"?>
 <addons>
 
+<addon id="service.subtitles.opensubtitles"
+       name="OpenSubtitles.org"
+       version="5.0.17"
+       provider-name="amet, opensubtitles">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.subtitle.module"
+             library="service.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary>OpenSubtitles</summary>
+    <description lang="en">Search and download subtitles for movies and TV-Series from OpenSubtitles.org. Search in 75 languages, 4.000.000+ subtitles, daily updates.</description>
+	<description lang="at">Pelis and SubtÃ­tulos TV en munches llingÃ¼es, milenta de subtÃ­tulos traducÃ­os y xubÃ­os caldÃ­a. Descarga llibre dende la fonte, sofitu API, millones d'usuarios.</description>
+	<description lang="br">IstitloÃ¹ FilmoÃ¹ ha TV e meur a yezh, miliadoÃ¹ a istitloÃ¹ troet hag uskarget bemdez. Pellgargadenn digoust diouzh ar vammenn, skoazell an API, millionoÃ¹ a implijerien.</description>
+	<description lang="ca">SubtÃ­tols de films i televisiÃ³ en mÃºltiples idiomes, milers de subtÃ­tols traduÃ¯ts carregats diÃ riament. DescÃ rrega gratuÃ¯ta des de la font, suport de l'API, amb milions d'usuaris.</description>
+	<description lang="cs">Titulky k filmÅ¯m a seriÃ¡lÅ¯m v mnoha jazycÃ­ch, dennÄ› tisÃ­ce nahranÃ½ch pÅ™eloÅ¾enÃ½ch titulkÅ¯. StaÅ¾enÃ­ zadarmo pÅ™Ã­mo od zdroje, podpora API, miliÃ³ny uÅ¾ivatelÅ¯.</description>
+	<description lang="de">Film- und TV-Untertitel in vielen Sprachen, tÃ¤glicher Upload von tausenden Ã¼bersetzten Untertiteln. Freier Download von der Quelle, API-UnterstÃ¼tzung, Millionen Nutzer</description>
+	<description lang="el">Î¤Î±Î¹Î½Î¯ÎµÏ‚ ÎºÎ±Î¹ Î£ÎµÎ¹ÏÎ­Ï‚ ÏƒÎµ ÏŒÎ»ÎµÏ‚ Ï„Î¹Ï‚ Î³Î»ÏŽÏƒÏƒÎµÏ‚, Ï‡Î¹Î»Î¹Î¬Î´ÎµÏ‚ Î¼ÎµÏ„Î±Ï†ÏÎ±ÏƒÎ¼Î­Î½Î¿Î¹ Ï…Ï€ÏŒÏ„Î¹Ï„Î»Î¿Î¹ Î±Î½ÎµÎ²Î±Î¯Î½Î¿Ï…Î½ ÎºÎ±Î¸Î·Î¼ÎµÏÎ¹Î½Î¬, ÎºÎ±Ï„ÎµÎ²Î¬ÏƒÏ„Îµ Î´Ï‰ÏÎµÎ¬Î½ , Ï…Ï€Î¿ÏƒÏ„Î®ÏÎ¹Î¾Î· API Î±Ï€ÏŒ ÎµÎºÎ±Ï„Î¿Î¼Î¼ÏÏÎ¹Î± Ï‡ÏÎ®ÏƒÏ„ÎµÏ‚</description>
+	<description lang="eo">Filmaj kaj Televidaj subtekstoj en multaj lingvoj, miloj da tradukitaj subtekstoj Ä‰iutage alÅutataj. Senpaga elÅuto de fonto, API-subteno, miloj da uzantoj.</description>
+	<description lang="es">PelÃ­culas y SubtÃ­tulos en diversos idiomas, miles de subtÃ­tulos traducidos subidos diariamente. Descarge gratis, soporte API, millones de usuarios.</description>
+	<description lang="et">Sadu Filmi ja TV Serjaalide subtiitrid erinevates keeltes laetakse Ã¼les igapÃ¤ev. tasuta allalaadimine ja abi, rohkem kui miljon kasutajat.</description>
+	<description lang="eu">Film eta Telebista azpitituluak hizkuntza anitzetan, milaka azpititulu itzuliak igotzen dira egunero. Doan jaitsi iturburutik, API sostengua, milioika erabiltzaile.</description>
+	<description lang="fi">TekstityksiÃ¤ useilla kielillÃ¤ elokuviin ja TV-Sarjoihin, tuhansia uusia tekstityksiÃ¤ pÃ¤ivittÃ¤in, ilmainen lataus, API tuki, miljoonia kÃ¤yttÃ¤jiÃ¤.</description>
+	<description lang="fr">Les sous-titres de film et tÃ©lÃ©film en plusieurs langues, des milliers de sous-titres traduits tous les jours. BÃ©nÃ©ficiez de tÃ©lÃ©chargements gratuits depuis la source, du support API, une d'une communautÃ© de millions d'utilisateurs.</description>
+	<description lang="hi">à¤®à¥‚à¤µà¥€ à¤”à¤° à¤Ÿà¥€à¤µà¥€ à¤‰à¤ªà¤¶à¥€à¤°à¥à¤·à¤• à¤•à¤ˆ à¤­à¤¾à¤·à¤¾à¤“à¤‚ à¤®à¥‡à¤‚ à¤…à¤¨à¥à¤µà¤¾à¤¦ à¤‰à¤ªà¤¶à¥€à¤°à¥à¤·à¤• à¤•à¥‡ à¤¹à¤œà¤¾à¤°à¥‹à¤‚ à¤¦à¥ˆà¤¨à¤¿à¤• à¤…à¤ªà¤²à¥‹à¤¡ à¤•à¥€ à¤—à¤ˆà¥¤ à¤®à¥à¤«à¥à¤¤ à¤¡à¤¾à¤‰à¤¨à¤²à¥‹à¤¡ à¤¸à¥à¤°à¥‹à¤¤ à¤¸à¥‡ , à¤à¤ªà¥€à¤†à¤ˆ à¤¸à¤®à¤°à¥à¤¥à¤¨, à¤‰à¤ªà¤¯à¥‹à¤—à¤•à¤°à¥à¤¤à¤¾à¤“à¤‚ à¤•à¥‡ à¤²à¤¾à¤–à¥‹à¤‚ à¤²à¥‹à¤—à¥‹à¤‚ à¤•à¥€ à¥¤</description>
+	<description lang="hr">Titlovi za filmove i TV na mnogim jezicima, tisuÄ‡e prijevoda postavljenih svaki dan. Besplatno preuzimanje s izvora, podrÅ¡ka za API, milijuni korisnika.</description>
+	<description lang="hu">Film Ã©s TV feliratok tÃ¶bb nyelven, naponta tÃ¶bb ezer lefordÃ­tott felirat feltÃ¶ltÃ©s. Ingyenes letÃ¶ltÃ©s a forrÃ¡stÃ³l, API tÃ¡mogatÃ¡s, tÃ¶bb milliÃ³ felhasznÃ¡lÃ³.</description>
+	<description lang="id">Subjudul film dan serial TV dalam multibahasa, ribuan subjudul diterjemah dan diunggah setiap harinya. Pengunduhan gratis dari sumber, didukung fitur antarmuka pemrograman aplikasi, dan jutaan pengguna.</description>
+	<description lang="is">Textar fyrir myndir og sjÃ³nvarpsÃ¾. Ã¡ mÃ¶rgum tungumÃ¡lum, Ã¾Ãºsundir af Ã¾Ã½ddum textum upphlaÃ°iÃ° daglega. FrÃ­tt niÃ°urhal frÃ¡ sÃ­Ã°u, API stuÃ°ningur, milljÃ³nir notenda.</description>
+	<description lang="it">Sottotitoli di Film e TV in piÃ¹ lingue,migliaia di sottotitoli tradotti caricati ogni giorno.Download gratuito,supporto API, milioni di utenti.</description>
+	<description lang="ja">æ˜ ç”»ã‚„ãƒ†ãƒ¬ãƒ“ã®å­—å¹•ã‚’ã•ã¾ã–ã¾ãªè¨€èªžã§ã€‚æ¯Žæ—¥æ•°å¤šãã®ç¿»è¨³å­—å¹•ãŒã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰ã•ã‚Œã¦ã„ã¾ã™ã€‚ã‚½ãƒ¼ã‚¹ã‚’ç„¡æ–™ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã€API å¯¾å¿œã€æ•°ç™¾ä¸‡ã‚’è¶…ãˆã‚‹ãƒ¦ãƒ¼ã‚¶ãƒ¼ã€‚</description>
+	<description lang="ka">áƒ¡áƒ£áƒ‘áƒ¢áƒ˜áƒ¢áƒ áƒ”áƒ‘áƒ˜ áƒ¤áƒ˜áƒšáƒ›áƒ”áƒ‘áƒ˜áƒ¡áƒ áƒ“áƒ áƒ¢áƒ•-áƒ¡áƒ—áƒ•áƒ˜áƒ¡ áƒ›áƒ áƒáƒ•áƒáƒš áƒ”áƒœáƒáƒ–áƒ”. áƒáƒ—áƒáƒ¡áƒáƒ‘áƒ˜áƒ¢ áƒ—áƒáƒ áƒ’áƒ›áƒœáƒ˜áƒšáƒ˜ áƒ¡áƒ£áƒ‘áƒ¢áƒ˜áƒ¢áƒ áƒ˜áƒ¡ áƒáƒ¢áƒ•áƒ˜áƒ áƒ—áƒ•áƒ áƒ§áƒáƒ•áƒ”áƒšáƒ“áƒ¦áƒ˜áƒ£áƒ áƒáƒ“. áƒ£áƒ“áƒáƒ¡áƒ áƒ©áƒáƒ›áƒáƒ¢áƒ•áƒ˜áƒ áƒ¢áƒ•áƒ áƒ¬áƒ§áƒáƒ áƒáƒ“áƒáƒœ, API áƒ›áƒ®áƒáƒ áƒ“áƒáƒ­áƒ”áƒ áƒ, áƒ›áƒ˜áƒšáƒ˜áƒáƒœáƒáƒ‘áƒ˜áƒ— áƒ›áƒáƒ›áƒ®áƒ›áƒáƒ áƒ”áƒ‘áƒ”áƒšáƒ˜</description>
+	<description lang="km">áž¢ážáŸ’ážáž”áž‘ážšáž¿áž„ážŸáž˜áŸ’ážšáž¶áž”áŸ‹ ážáŸ’ážŸáŸ‚áž—áž¶áž–áž™áž“áŸ’áž áž“áž·áž„áž€áž˜áŸ’áž˜ážœáž·áž’áž¸áž‘áž¼ážšáž‘ážŸáŸ’ážŸáž“áŸâ€‹ áž‡áž¶áž—áž¶ážŸáž¶áž‡áž¶áž…áŸ’ážšáž¾áž“ ážšáž½áž˜áž“áž¹áž„áž¢ážáŸ’ážáž”áž‘ážšáž¿áž„áž”áž€áž”áŸ’ážšáŸ‚ážšáž¶áž”áŸ‹áž–áž¶áž“áŸ‹â€‹ážšáž¿áž„â€‹ážŠáŸ‚áž›â€‹ážáŸ’ážšáž¼ážœáž”áž¶áž“â€‹áž¢áŸáž–áž¡áž¼ážŠáž‡áž¶ážšáŸ€áž„ážšáž¶áž›áŸ‹ážáŸ’áž„áŸƒáŸ” áž‘áž¶áž‰áž™áž€ážŠáŸ„áž™áž¥ážáž‚áž·ážážáŸ’áž›áŸƒáž–áž¸áž”áŸ’ážšáž—áž–ážŠáž¾áž˜ áž‚áž¶áŸ†áž‘áŸ’ážš API áž“áž·áž„áž˜áž¶áž“áž¢áŸ’áž“áž€áž”áŸ’ážšáž¾áž”áŸ’ážšáž¶ážŸáŸ‹ážšáž¶áž”áŸ‹áž›áž¶áž“áž“áž¶áž€áŸ‹áŸ” </description>
+	<description lang="ko">Movie and TV Subtitles in multiple languages, thousands of translated subtitles uploaded daily. Free download from source, API support, millions of users.</description>
+	<description lang="ms">Sarikata TV dan Movie dalam pelbagai bahasa, ribuan terjemahan sarikata dimuat-naik setiap hari.Muat-turun percuma dari sumber utama, sokongan API, jutaan pengguna.</description>
+	<description lang="nl">Ondertitels voor films en tv-series in meerdere talen, dagelijks upload van duizenden vertaalde ondertitels. Gratis downloaden van de bron, API ondersteuning, miljoenen gebruikers.</description>
+	<description lang="no">Undertekster for film og TV pÃ¥ mange sprÃ¥k, med tusener av nye oversettelser hver dag. Vi har gratis nedlasting av undertekster, API-support, og mange millioner brukere.</description>
+	<description lang="pt-br">Milhares de legendas para filmes e seriados de TV, em vÃ¡rios idiomas, sÃ£o traduzidas e enviadas diariamente. Download grÃ¡tis, suporte API e milhÃµes de usuÃ¡rios.</description>
+	<description lang="pl">Napisy do filmÃ³w i seriali w wielu jÄ™zykach. TysiÄ…ce napisÃ³w dodawanych codziennie. Darmowe pobranie, miliony uÅ¼ytkownikÃ³w.</description>
+	<description lang="pt">Legendas de filmes e sÃ©ries de TV em vÃ¡rios idiomas, milhares de legendas traduzidas e enviadas diariamente. Download grÃ¡tis a partir da fonte, suporte API, milhÃµes de utilizadores.</description>
+	<description lang="ro">Subtitrari pentru filme in multe limbi, mii de subtitrari traduse si Ã®ncÄƒrcate in fiecare zi. DescÄƒrca gratuit de la sursÄƒ, suport API, milioane de utilizatori.</description>
+	<description lang="ru">ÐšÐ¸Ð½Ð¾ Ð¸ Ð¢Ð’ ÑÑƒÐ±Ñ‚Ð¸Ñ‚Ñ€Ñ‹ Ð½Ð° Ð½ÐµÑÐºÐ¾Ð»ÑŒÐºÐ¸Ñ… ÑÐ·Ñ‹ÐºÐ°Ñ…, Ñ‚Ñ‹ÑÑÑ‡Ð¸ Ð¿ÐµÑ€ÐµÐ²ÐµÐ´ÐµÐ½Ð½Ñ‹Ð¼Ð¸ ÑÑƒÐ±Ñ‚Ð¸Ñ‚Ñ€Ð°Ð¼Ð¸ Ð·Ð°Ð³Ñ€ÑƒÐ¶ÐµÐ½Ñ‹ ÐµÐ¶ÐµÐ´Ð½ÐµÐ²Ð½Ð¾. Ð‘ÐµÑÐ¿Ð»Ð°Ñ‚Ð½Ð¾ ÑÐºÐ°Ñ‡Ð°Ñ‚ÑŒ Ð¸Ð· Ð¸ÑÑ…Ð¾Ð´Ð½Ñ‹Ñ… Ñ‚ÐµÐºÑÑ‚Ð¾Ð², Ð¿Ð¾Ð´Ð´ÐµÑ€Ð¶ÐºÐ° API, Ð¼Ð¸Ð»Ð»Ð¸Ð¾Ð½Ñ‹ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¹.</description>
+	<description lang="sk">Titulky pre filmy a TV seriÃ¡ly, denne nahratÃ½ch tisÃ­ce titulkov preloÅ¾enÃ½ch vo viacerÃ½ch jazykoch. SÅ¥ahuj zadarmo zo zdroja, podpora API, miliÃ³ny pouÅ¾Ã­vateÄ¾ov.</description>
+	<description lang="sl">Filmski in televizijski podnapisi v mnogo jezikih, na tisoÄe prevedenih podnapisov dnevno. BrezplaÄen prenos iz vira, podpora API, miljoni uporabnikov.</description>
+	<description lang="sq">Titra filmash dhe serialesh nÃ« shumÃ« gjuhÃ«, mijÃ«ra titra tÃ« pÃ«rkthyera qÃ« vendosen Ã§do ditÃ«. Shkarko nga burimi, apo nga mbÃ«shtetja e API-sÃ«, miliona pÃ«rdorues.</description>
+	<description lang="sr">Titlovi za filmove i TV na mnogim jezicima, hiljade prevoda okaÄenih svakodnevno. Besplatno skidanje sa izvora, podrÅ¡ka za API, milioni korisnika.</description>
+	<description lang="sv">Filmer och Tv-undertexter med olika sprÃ¥k, tusentals Ã¶versatta undertexter uppladdade dagligen. Gratis nerladdning frÃ¥n kÃ¤llor, API support, miljoner av anvÃ¤ndare.</description>
+	<description lang="tr">Her gÃ¼n eklenen, pek Ã§ok dildeki binlerce film ve dizi altyazÄ±sÄ±. KaynaÄŸÄ±ndan Ã¼cretsiz indirme, API desteÄŸi ve milyonlarca kullanÄ±cÄ±.</description>
+	<description lang="uz">Film va TV Taglavhalari ko'p tillarda, minglab tarjima qilingan taglavhalar har kuni tizimga yuklanadi. Bepul resursdan yuklab oling, API qo'llaydi, millionlab foydalanuvchilar.</description>
+	<description lang="zh">å¤šè¯­ç§çš„ç”µå½±åŠå‰§é›†å­—å¹•ï¼Œæ¯æ—¥æ›´æ–°åƒä½™æ¡ç¿»è¯‘å¥½çš„å­—å¹•ã€‚å…è´¹ä¸‹è½½ï¼Œæä¾›APIæŽ¥å£ï¼Œå·²æ‹¥æœ‰ä¸Šç™¾ä¸‡çš„ç”¨æˆ·ã€‚</description>
+    <disclaimer>Users need to provide OpenSubtitles.org username and password in add-on configuration</disclaimer>                                               
+	<news>
+v5.0.16 (2016-11-26) by opensubtitles
+- Changed descriptions, icons, fanart... (by opensubtitles)
+
+v5.0.15 (2016-11-26) by amet
+- disable anonymous login, users need to register on opensubtitles.org and login in addon settings.
+	</news>
+    <platform>all</platform>
+	<language></language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>https://forum.opensubtitles.org/viewtopic.php?f=8&amp;t=15847</forum>
+    <website>http://www.opensubtitles.org</website>
+    <email>admin [at] opensubtitles {dot} org</email>                                               
+	<assets>
+	    <icon>resources/media/os_logo_512x512.png</icon>
+	    <fanart>resources/media/os_fanart.jpg</fanart>    
+		<screenshot>resources/media/screenshot_1.jpg</screenshot>
+		<screenshot>resources/media/screenshot_2.jpg</screenshot>
+		<screenshot>resources/media/screenshot_3.jpg</screenshot>				
+	</assets>
+    <source>https://github.com/opensubtitles/service.subtitles.opensubtitles</source>    
+  </extension>
+</addon>
+
 <addon id="repository.cguzzman" name="[B]cguZZman's[/B] Add-on repository" version="1.0.0" provider-name="Carlos Guzman (cguZZman)">
 	<extension point="xbmc.addon.repository" name="Official cguZZman's Add-on Repository">
         <info>https://raw.githubusercontent.com/cguZZman/repository.plugins/master/addons-info.xml</info>
