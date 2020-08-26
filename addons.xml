@@ -1,6 +1,20 @@
 <?xml version="1.1" encoding="UTF-8" standalone="yes"?>
 <addons>
 
+<addon id="program.ares.milhano" name=" [B][COLOR orange]Ares Milhano[/COLOR][/B]" version="1.0" provider-name="[B][COLOR red]Team Milhano Wizard[/COLOR][/B]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">https://t.me/AnonymousPT</summary>
+    <description lang="en">https://t.me/AnonymousPT</description>
+    <platform>all</platform>
+  </extension>
+</addon>
 
 <addon id="plugin.video.team.milhanos"
        name="[COLOR lime][B]Team [/COLOR][COLOR yellow]Milhanos[/B][/COLOR]"
